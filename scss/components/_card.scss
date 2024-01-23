@@ -1,0 +1,59 @@
+@use '../abstracts/variables' as var;
+@use '../abstracts/functions' as func;
+
+.card__list,
+.card__item {
+	display: flex;
+	flex-direction: column;
+}
+
+.card__list {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	max-width: func.em(360, var.$font-size-primary);
+	margin: func.em(40, var.$font-size-primary) 0
+		func.em(60, var.$font-size-primary);
+	border-radius: 8px;
+	overflow: hidden;
+}
+
+.card__item {
+	align-items: flex-start;
+	gap: func.em(25, var.$font-size-primary);
+	padding: func.em(48, var.$font-size-primary);
+	background-color: var.$color-black;
+	color: var.$color-white-light;
+}
+
+.card__item--sedans {
+	background-color: var.$color-bright-orange;
+}
+
+.card__item--suvs {
+	background-color: var.$color-dark-cyan;
+}
+
+.card__item--luxury {
+	background-color: var.$color-very-dark-cyan;
+}
+
+.card__item-title {
+	color: var.$color-very-light-gray;
+	text-transform: uppercase;
+}
+
+.card__item .btn {
+	margin-top: func.em(25);
+}
+
+@media (min-width: 51.25em) {
+	.card__list {
+		flex-direction: row;
+		max-width: func.em(920, var.$font-size-primary);
+	}
+
+	.card__item {
+		flex: 1;
+	}
+}
