@@ -1,13 +1,13 @@
 @use '../abstracts/variables' as var;
 @use '../abstracts/functions' as func;
 
-.card__list,
-.card__item {
+.cards,
+.card {
 	display: flex;
 	flex-direction: column;
 }
 
-.card__list {
+.cards {
 	display: flex;
 	flex-direction: column;
 	width: 100%;
@@ -18,7 +18,7 @@
 	overflow: hidden;
 }
 
-.card__item {
+.card {
 	align-items: flex-start;
 	gap: func.em(25, var.$font-size-primary);
 	padding: func.em(48, var.$font-size-primary);
@@ -26,34 +26,34 @@
 	color: var.$color-white-light;
 }
 
-.card__item--sedans {
+.card--sedans {
 	background-color: var.$color-bright-orange;
 }
 
-.card__item--suvs {
+.card--suvs {
 	background-color: var.$color-dark-cyan;
 }
 
-.card__item--luxury {
+.card--luxury {
 	background-color: var.$color-very-dark-cyan;
 }
 
-.card__item-title {
+.card__title {
 	color: var.$color-very-light-gray;
 	text-transform: uppercase;
 }
 
-.card__item .btn {
+.card__btn {
 	margin-top: func.em(25);
 }
 
 @media (min-width: 51.25em) {
-	.card__list {
+	.cards {
 		flex-direction: row;
 		max-width: func.em(920, var.$font-size-primary);
 	}
 
-	.card__item {
+	.card {
 		flex: 1;
 	}
 }
