@@ -44,7 +44,7 @@
 }
 
 .card__btn {
-	margin-top: func.em(25);
+	margin-top: func.em(25, var.$font-size-primary);
 }
 
 @media (min-width: 51.25em) {
