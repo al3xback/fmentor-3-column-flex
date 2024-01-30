@@ -38,6 +38,11 @@
 	background-color: var.$color-very-dark-cyan;
 }
 
+.card__img {
+	width: func.em(60, var.$font-size-primary);
+	height: auto;
+}
+
 .card__title {
 	color: var.$color-very-light-gray;
 	text-transform: uppercase;
